@@ -1,3 +1,16 @@
-	<script type="text/template" id="apartado-item-template">
-		<li><%- apartado %> - <%- key %> <a href="#/apartado/<%- id %>" class="ver-apartado btn btn-primary btn-lg">ver</a><a href="#/apartado/edit/<%- id %>" class="editar-apartado btn btn-primary btn-lg">editar</a></li>
+	<script type="text/template" id="apartado-item">
+		<div class="col-md-4">
+			<div class="apartado-container">
+			<a href="#/apartado/<%- id %>" class="ver-apartado ">
+				<img class="img-thumbnail" src="<%- img ? img : 'img/upload.png' %>" />
+			</a>
+			<h4>
+				<a href="#/apartado/<%- id %>" class="ver-apartado ">
+					<%- apartado %>
+				</a><a href="#/apartado/edit/<%- id %>" class="editar-apartado btn-xs btn-default">
+						<span class="glyphicon glyphicon-edit"></span> Editar
+					</a>
+			</h4>
+			</div>
+		</div>
 	</script>

@@ -19,6 +19,16 @@ body {
 	/*background-color: #FFFFFF;*/
 }
 
+div.apartado-container{
+	text-align: center;
+	
+}
+div.apartado-container > a > img{
+	width: 250px;
+}
+div.apartado-container > h4{
+	color: #3498db;
+
 h2 {
 	color: #3498db;
 }
@@ -58,3 +68,4 @@ h2 {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+

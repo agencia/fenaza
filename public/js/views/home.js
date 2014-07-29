@@ -7,9 +7,7 @@ window.FENAZA.views.home = Backbone.View.extend({
   },
 
   initialize: function() {
-
     this.template= _.template($('#home-template').html());
-    this.liApartado= _.template($('#apartado-item-template').html());
     this.listenTo(FENAZA.data.apartados,'add', this.addOneApartado);
   	this.render();
     FENAZA.data.apartados.each(this.addOneApartado, this);

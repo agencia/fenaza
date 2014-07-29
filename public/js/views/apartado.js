@@ -2,13 +2,13 @@
 
 FENAZA.views.apartado = Backbone.View.extend({
         //... is a table row tag.
-        tagName: "li",
+        tagName: "div",
         events: {
             "click .editar-apartado": "detail"
 
         },
         initialize: function(options) {
-            this.template= _.template($('#apartado-item-template').html());
+            this.template= _.template($('#apartado-item').html());
         	this.listenTo(this.model, 'change', this.render);
         },
         // Re-render the titles of the todo item.
