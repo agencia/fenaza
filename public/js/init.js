@@ -20,9 +20,9 @@ var init = function(){
 			}
 		},
 		success : function(data){
-			FENAZA.app =  new FENAZA.views.home();
 			FENAZA.data.redes.add(data.redes);
 			FENAZA.data.apartados.add(data.apartados);
+			FENAZA.data.eventos.add(data.eventos);
 			new FENAZA.router();
  			Backbone.history.start();
 

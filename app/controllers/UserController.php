@@ -13,9 +13,11 @@ class UserController extends BaseController {
 		{
 			$redes = Red::all();
 			$apartados = Apartado::all();
+			$eventos = Evento::all();
 		    return Response::json(array(
 		    	"success"=>"Logged in", 
 		    	"redes"=>$redes,
+		    	"eventos"=>$eventos,
 		    	"apartados" => $apartados
 		    	),200);
 		} else {

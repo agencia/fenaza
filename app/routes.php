@@ -21,4 +21,4 @@ Route::Controller("ws","WebserviceController");
 Route::Controller("portada","PortadaController");
 Route::Controller("redes","RedesController");
 Route::Controller("apartados","ApartadosController");
-Route::Controller("eventos","EventosController");
+Route::resource("eventos","EventosController");

@@ -15,8 +15,12 @@ $files = array(
         "js/views/red.js",
         "js/models/red.js",
         "js/models/apartado.js",
+        "js/models/evento.js",
+        "js/views/evento-new.js",
+        "js/views/evento.js",
         "js/views/apartado.js",
-        "js/views/apartado-edit.js"
+        "js/views/apartado-edit.js",
+        "js/views/apartado-detail.js"
 	);
 
     foreach($files as $file)

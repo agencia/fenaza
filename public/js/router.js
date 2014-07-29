@@ -1,26 +1,25 @@
 //router.js
  $(function(){
-window.FENAZA.router = Backbone.Router.extend({
+  window.FENAZA.router = Backbone.Router.extend({
 
-  routes: {
-    "":                 "home",
-    "apartado/:id":  		"apartado"
-  },
+    routes: {
+      "":                 "home",
+      "apartado/:id":  		"apartado"
+    },
 
-  home: function() {
-    
-  },
+    home: function() {
+      FENAZA.app =  new FENAZA.views.home();
+    },
 
-  apartado: function(id) {
-    var self = this;
+    apartado: function(id) {
+      //var self = this;
 
-      FENAZA.app = new FENAZA.views.apartadoDetalle({id:id}); 
-      // do something...
-      self.navigate("/");
-    });
+        FENAZA.app = new FENAZA.views.apartadoDetail({id:id}); 
+        // do something...
+        //self.navigate("/");
 
-    //FENAZA.app.other(id);
-  }
+      //FENAZA.app.other(id);
+    }
 
-});
+  });
 });

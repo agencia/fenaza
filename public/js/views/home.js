@@ -10,10 +10,10 @@ window.FENAZA.views.home = Backbone.View.extend({
 
     this.template= _.template($('#home-template').html());
     this.liApartado= _.template($('#apartado-item-template').html());
-  	this.listenTo(FENAZA.data.redes, 'add', this.addOneRed);
-  	this.listenTo(FENAZA.data.apartados, 'add', this.addOneApartado);
-  	//FENAZA.data.redes.fetch();
+
   	this.render();
+        FENAZA.data.redes.each(this.addOneRed, this);
+    FENAZA.data.apartados.each(this.addOneApartado, this);
   },
 	addOneRed: function(red) {
             var view = new FENAZA.views.red({model: red});
