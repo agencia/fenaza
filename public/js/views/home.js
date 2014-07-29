@@ -10,7 +10,8 @@ window.FENAZA.views.home = Backbone.View.extend({
 
     this.template= _.template($('#home-template').html());
     this.liApartado= _.template($('#apartado-item-template').html());
-
+    this.listenTo(FENAZA.data.redes,'add', this.addOneRed);
+    this.listenTo(FENAZA.data.apartados,'add', this.addOneApartado);
   	this.render();
         FENAZA.data.redes.each(this.addOneRed, this);
     FENAZA.data.apartados.each(this.addOneApartado, this);
@@ -29,9 +30,6 @@ window.FENAZA.views.home = Backbone.View.extend({
     
   	this.$el.html(this.template);
   	return this;
-  },
-  other: function(id){
-  	console.log("call this function with id: " + id);
   }
 
 });

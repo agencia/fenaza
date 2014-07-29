@@ -5,8 +5,17 @@ window.FENAZA = {
 	views: {},
 	models: {},
 	collections: {},
-	data: {}
+	data: {},
+	load : function(data){
+		this.data.redes.add(data.redes);
+		this.data.apartados.add(data.apartados);
+		this.data.eventos.add(data.eventos);
+		this.app= new FENAZA.views.layout();
+		new this.router();
+ 		Backbone.history.start();
+	}
 };
+
 
 var init = function(){
 	$.ajax(FENAZA.site + 'user',{
@@ -20,12 +29,7 @@ var init = function(){
 			}
 		},
 		success : function(data){
-			FENAZA.data.redes.add(data.redes);
-			FENAZA.data.apartados.add(data.apartados);
-			FENAZA.data.eventos.add(data.eventos);
-			new FENAZA.router();
- 			Backbone.history.start();
-
+			FENAZA.load(data);
 		}
 	});
 };
@@ -35,3 +39,4 @@ $.get("./templates/index.php", function(data){
 
     init();
 });
+

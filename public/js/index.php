@@ -18,6 +18,7 @@ $files = array(
         "js/models/evento.js",
         "js/views/evento-new.js",
         "js/views/evento.js",
+        "js/views/layout.js",
         "js/views/apartado.js",
         "js/views/apartado-edit.js",
         "js/views/apartado-detail.js"

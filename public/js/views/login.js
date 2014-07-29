@@ -28,9 +28,7 @@ window.FENAZA.views.login = Backbone.View.extend({
   		data: $(this.loginForm).serialize(),
   		dataType: "json",
   		success: function(data, textStatus, jqXHR){
-  			FENAZA.app =  new FENAZA.views.home();
-        FENAZA.data.redes.add(data.redes);
-        FENAZA.data.apartados.add(data.apartados);
+  			FENAZA.load(data);
   		},
   		error: function(jqXHR,textStatus,errorThrown){
   			if(jqXHR.status == 400){

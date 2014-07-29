@@ -5,7 +5,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fenaza Panel</title>
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/app.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<style>
 		/*@import url(//fonts.googleapis.com/css?family=Lato:700);*/
@@ -31,7 +32,7 @@
   </div>
 </div>
 
-<div id="fenazapp">
+<div id="fenazapp" class="container">
 	
 </div>
 	<script src="js/app.js"></script>

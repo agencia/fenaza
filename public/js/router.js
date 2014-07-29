@@ -1,7 +1,11 @@
-//router.js
- $(function(){
+
+
   window.FENAZA.router = Backbone.Router.extend({
 
+    initialize: function() {
+      
+    },
+  
     routes: {
       "":                 "home",
       "apartado/:id":  		"apartado"
@@ -22,4 +26,3 @@
     }
 
   });
-});
