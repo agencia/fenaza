@@ -8,21 +8,26 @@
   
     routes: {
       "":                 "home",
-      "apartado/:id":  		"apartado"
+      "apartado/:id":  		"apartado",
+      "redes":            "redes"
     },
 
     home: function() {
       FENAZA.app =  new FENAZA.views.home();
+      this.nav("home");
     },
 
     apartado: function(id) {
-      //var self = this;
-
         FENAZA.app = new FENAZA.views.apartadoDetail({id:id}); 
-        // do something...
-        //self.navigate("/");
+    },
 
-      //FENAZA.app.other(id);
+    redes: function(){
+      FENAZA.app = new FENAZA.views.redes();
+      this.nav("redes");
+    },
+    nav : function(activate){
+      $("#navbar > div > div.navbar-collapse.collapse > ul:nth-child(1) > li").removeClass("active");
+      $("#navbar > div > div.navbar-collapse.collapse > ul:nth-child(1) > li." + activate).addClass("active");
     }
 
   });

@@ -20,6 +20,7 @@ $files = array(
         "js/views/evento.js",
         "js/views/layout.js",
         "js/views/apartado.js",
+        "js/views/redes.js",
         "js/views/apartado-edit.js",
         "js/views/apartado-detail.js"
 	);
