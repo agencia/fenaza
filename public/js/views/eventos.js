@@ -1,4 +1,4 @@
-FENAZA.views.apartadoDetail = Backbone.View.extend({
+FENAZA.views.eventos = Backbone.View.extend({
         //...
         el: $("#fenazapp"),
         tagName: "div",
@@ -12,7 +12,6 @@ FENAZA.views.apartadoDetail = Backbone.View.extend({
             this.listenTo(FENAZA.data.eventos,"add",this.addEvento);
             this.render();
             FENAZA.data.eventos.each(this.addEvento,this);
-            console.log("init");
         },
         // Re-render the titles of the todo item.
         render: function() {
@@ -20,8 +19,10 @@ FENAZA.views.apartadoDetail = Backbone.View.extend({
             return this;
         },
         addEvento:function(evento){
-            var view = new FENAZA.views.evento({model:evento});
-            this.$("#eventos-list").append(view.render().el);
+            if(evento.get("idApartado") === this.model.get("id")){
+                var view = new FENAZA.views.evento({model:evento});
+                this.$("#eventos-list").append(view.render().el);
+            }
         },
         newEvent: function(e){
             e.preventDefault();

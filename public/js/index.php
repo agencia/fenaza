@@ -18,14 +18,16 @@ $files = array(
         "js/models/evento.js",
         "js/models/portada.js",
         "js/views/evento-new.js",
+        "js/views/evento-edit.js",
         "js/views/evento.js",
         "js/views/layout.js",
         "js/views/apartado.js",
-        "js/views/apartado-list.js",
+        "js/views/apartados.js",
         "js/views/apartado-new.js",
         "js/views/redes.js",
         "js/views/apartado-edit.js",
-        "js/views/apartado-detail.js"
+        "js/views/apartados.js",
+        "js/views/eventos.js"
 	);
 
     foreach($files as $file)

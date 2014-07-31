@@ -1,19 +1,19 @@
-FENAZA.views.eventoNew = Backbone.View.extend({
+FENAZA.views.eventoEdit = Backbone.View.extend({
+        //... is a table row tag.
         tagName: "div",
         events: {
-            "submit #form-evento-new": "save"
+            "submit #form-evento-edit": "save"
 
         },
-        collection: FENAZA.data.eventos,
         initialize: function(options) {
-            this.template= _.template($('#evento-new').html());
-            this.idApartado = options.idApartado;
+            this.template= _.template($('#evento-edit').html());
         },
+        // Re-render the titles of the todo item.
         render: function() {
-            $("#myModalLabel").html("Nuevo Evento");
+            this.$el.html(this.template(this.model.toJSON()));
+            $("#myModalLabel").html("Editar Evento");
             var btnSubmit = $("<button />").addClass("btn btn-success btn-submit").html("Guardar");
             var btnCancel = $("<button />").addClass("btn btn-danger").attr("data-dismiss","modal").html("Cancelar");
-            this.$el.html(this.template({idApartado:this.idApartado}));
             $("#myModalFooter").html(btnCancel);
             $("#myModalFooter").append(btnSubmit);
             $('.btn-submit').on('click', this.submit);
@@ -21,18 +21,13 @@ FENAZA.views.eventoNew = Backbone.View.extend({
         },
         save: function(e){
             e.preventDefault();
-            var data = $("#form-evento-new").serializeObject();
-            var fecha = data.fecha.split("/");
-            if(fecha[0].length < 3) {
-                data.fecha = fecha[2] + '-' + fecha[1] + '-' + fecha[0];
-            }
-            
-            this.collection.create(data);
+            console.log("edit");
+            this.model.save($("#form-evento-edit").serializeObject());
             $("#myModal").modal('hide');
         },
         submit: function(){
             $('.btn-submit').off('click');
-            $("#form-evento").submit();
+            $("#form-evento-edit").submit();
         }
 
     });

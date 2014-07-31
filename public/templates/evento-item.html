@@ -1,3 +1,24 @@
 	<script type="text/template" id="evento-item">
-		<%- evento %> <a href="#/evento/edit/<%- idEvento %>" class="editar-apartado btn btn-primary ">editar</a>
+	<div class="evento-img col-md-4">
+		<img src="<%- img %>" width="100%" />
+	</div>
+	<div class="evento-data col-md-8">
+		<div><b><%- evento %></b><div>
+		<div><%- fecha_es %><div>
+		<div><%- etiqueta1 %><div>
+		<div><%- etiqueta2 %><div>
+		<div>modificado: <br /><%- modificado %><div>
+		<div>Opciones:
+			<a href="#" class="btn-editar text-primary">
+				<span class="glyphicon glyphicon-edit"></span>
+			</a>
+			<a href="#" class="btn-status text-<%- status ==1 ? 'success' : 'danger' %>">
+				<span class="glyphicon glyphicon-eye-<%- status == 1 ? 'open' : 'close' %>"></span>
+			</a>
+			<a href="#" class="btn-eliminar text-danger">
+				<span class="glyphicon glyphicon-trash"></span>
+			</a>
+		<div>
+	</div>
+		 
 	</script>

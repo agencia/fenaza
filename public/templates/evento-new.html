@@ -1,21 +1,23 @@
 		<script type="text/template" id="evento-new">
 
 		<form id="form-evento-new" method="post" action="#">
-			<div>
-				<span>Evento:</span><input name="evento" />
+			<div class="form-group">
+			    <label for="eventoNewFormEvento">Nombre</label>
+			    <input name="evento" class="form-control" id="eventoNewFormEvento" required />
 			</div>
-			<div>
-				<span>fecha:</span><input name="fecha" />
+			<div class="form-group">
+			    <label for="eventoNewFormFecha">Fecha</label>
+			    <input name="fecha" type="date" class="form-control" id="eventoNewFormFecha" required />
 			</div>
-			<div>
-				<span>etiqueta1:</span><input name="etiqueta1"  />
+			<div class="form-group">
+			    <label for="eventoNewFormEtiqueta1">Etiqueta 1</label>
+			    <input name="etiqueta1" class="form-control" id="eventoNewFormEtiqueta1" required />
 			</div>
-			<div>
-				<span>etiqueta2:</span><input name="etiqueta2"  />
+			<div class="form-group">
+			    <label for="eventoNewFormEtiqueta2">Etiqueta 2</label>
+			    <input name="etiqueta2" class="form-control" id="eventoNewFormEtiqueta2" required />
 			</div>
-			<div>
 			<input type="hidden" name="idApartado" value="<%= idApartado %>"  />
-				<input type="submit" />
-			</div>
+				<input type="submit" style="visibility:hidden;" />
 		</form>
 	</script>

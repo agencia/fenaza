@@ -24,7 +24,8 @@
     },
 
     apartado: function(id) {
-        FENAZA.app = new FENAZA.views.apartadoDetail({id:id}); 
+        FENAZA.app = new FENAZA.views.eventos({id:id}); 
+      this.nav("apartados");
     },
 
     redes: function(){

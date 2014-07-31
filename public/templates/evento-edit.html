@@ -1,0 +1,22 @@
+		<script type="text/template" id="evento-edit">
+
+		<form id="form-evento-edit" method="post" action="#">
+			<div class="form-group">
+			    <label for="eventoNewFormEvento">Nombre</label>
+			    <input name="evento" class="form-control" id="eventoNewFormEvento" value="<%- evento %>" required />
+			</div>
+			<div class="form-group">
+			    <label for="eventoNewFormFecha">Fecha</label>
+			    <input name="fecha" type="date" class="form-control" id="eventoNewFormFecha" value="<%- fecha %>" required />
+			</div>
+			<div class="form-group">
+			    <label for="eventoNewFormEtiqueta1">Etiqueta 1</label>
+			    <input name="etiqueta1" class="form-control" id="eventoNewFormEtiqueta1" value="<%- etiqueta1 %>"" required />
+			</div>
+			<div class="form-group">
+			    <label for="eventoNewFormEtiqueta2">Etiqueta 2</label>
+			    <input name="etiqueta2" class="form-control" id="eventoNewFormEtiqueta2" value="<%- etiqueta2 %>"required />
+			</div>
+				<input type="submit" style="visibility:hidden;" />
+		</form>
+	</script>
