@@ -7,20 +7,13 @@ window.FENAZA.views.home = Backbone.View.extend({
   },
 
   initialize: function() {
-    this.template= _.template($('#home-template').html());
-    this.listenTo(FENAZA.data.apartados,'add', this.addOneApartado);
-  	this.render();
-    FENAZA.data.apartados.each(this.addOneApartado, this);
+    this.template= _.template($('#home-template').html());  	this.render();
   },
-	addOneApartado: function(apartado) {
-          var view = new FENAZA.views.apartado({model: apartado});
-            this.$("#list-apartados").append(view.render().el);
-        },
   render: function() {
 
     $('#myModal').modal({show:false});
-    
-  	this.$el.html(this.template);
+    //console.log(FENAZA.portada);
+  	this.$el.html(this.template({portada:FENAZA.portada.toJSON()}));
   	return this;
   }
 

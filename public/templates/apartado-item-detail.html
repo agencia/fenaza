@@ -1,17 +1,14 @@
 	<script type="text/template" id="apartado-item-detail-template">
 
-		<form id="form-apartado-edit" method="post" action="#">
-			<div>
-				<span>apartado:</span><input name="apartado" value="<%- apartado %>" />
+		<form id="form-apartado" method="post" action="#">
+			<div class="form-group">
+			    <label for="apartadoEditFormApartado">Nombre</label>
+			    <input name="apartado" class="form-control" value="<%- apartado %>" id="apartadoEditFormApartado" required />
 			</div>
-			<div>
-				<span>key:</span><input name="key" value="<%- key %>" />
+			<div class="form-group">
+			    <label for="apartadoEditFormkey">Key</label>
+			    <input name="key" class="form-control" value="<%- key %>" id="apartadoEditFormKey" required />
 			</div>
-			<div>
-				<span>img:</span><input name="img" value="<%- img %>" />
-			</div>
-			<div>
-				<input type="submit" /><a href="#" class="cancel-edit-apartado">Cancelar</a>
-			</div>
+			<input type="submit" style="visibility:hidden;">
 		</form>
 	</script>

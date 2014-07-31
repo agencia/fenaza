@@ -3,7 +3,7 @@ body {
 }
 
 #login-container {
-	width: 500px;
+	width: 400px;
 	margin: 100px auto;
 
 }
@@ -13,6 +13,16 @@ body {
 	margin-top: 10px;
 	color: red;
 	display: none;
+}
+
+#portada {
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.navbar-brand{
+  color: #3498db !important;
 }
 
 .container{
@@ -28,8 +38,8 @@ div.apartado-container > a > img{
 }
 div.apartado-container > h4{
 	color: #3498db;
-
-h2 {
+}
+h1 {
 	color: #3498db;
 }
 

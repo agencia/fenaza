@@ -14,11 +14,13 @@ class UserController extends BaseController {
 			$redes = Red::all();
 			$apartados = Apartado::all();
 			$eventos = Evento::all();
+			$portada = Portada::find(1);
 		    return Response::json(array(
-		    	"success"=>"Logged in", 
-		    	"redes"=>$redes,
-		    	"eventos"=>$eventos,
-		    	"apartados" => $apartados
+		    	"success"	=>"Logged in", 
+		    	"redes"		=>$redes,
+		    	"eventos"	=>$eventos,
+		    	"apartados" => $apartados,
+		    	"portada" 	=> $portada
 		    	),200);
 		} else {
 			return Response::json(array("error"=>"Not logged in"),401);

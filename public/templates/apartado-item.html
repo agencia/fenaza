@@ -1,16 +1,17 @@
 	<script type="text/template" id="apartado-item">
-		<div class="col-md-4">
-			<div class="apartado-container">
-			<a href="#/apartado/<%- id %>" class="ver-apartado ">
-				<img class="img-thumbnail" src="<%- img ? img : 'img/upload.png' %>" />
-			</a>
-			<h4>
-				<a href="#/apartado/<%- id %>" class="ver-apartado ">
+		<td><%= key %></td>
+		<td><a href="#/apartado/<%- id %>" class="ver-apartado ">
 					<%- apartado %>
-				</a><a href="#/apartado/edit/<%- id %>" class="editar-apartado btn-xs btn-default">
+				</a>
+		</td>
+		<td><a href="#/apartado/edit/<%- id %>" class="editar-apartado btn">
 						<span class="glyphicon glyphicon-edit"></span> Editar
-					</a>
-			</h4>
-			</div>
-		</div>
+					</a></td>
+		<td><%- modificado %></td>
+		<td>
+			<a href="#" class="btn-status text-<%- status ==1 ? 'success' : 'danger' %>"><span class="glyphicon glyphicon-eye-<%- status == 1 ? 'open' : 'close' %>"></span></a>
+			<a href="#" class="btn-delete text-danger">
+				<span class="glyphicon glyphicon-trash"></span>
+			</a>
+		</td>
 	</script>

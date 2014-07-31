@@ -10,6 +10,7 @@ window.FENAZA = {
 		this.data.redes.add(data.redes);
 		this.data.apartados.add(data.apartados);
 		this.data.eventos.add(data.eventos);
+		FENAZA.portada = new FENAZA.models.portada(data.portada);
 		this.app= new FENAZA.views.layout();
 		new this.router();
  		Backbone.history.start();

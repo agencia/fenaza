@@ -9,12 +9,18 @@
     routes: {
       "":                 "home",
       "apartado/:id":  		"apartado",
-      "redes":            "redes"
+      "redes":            "redes",
+      "apartados":        "apartados" 
     },
 
     home: function() {
       FENAZA.app =  new FENAZA.views.home();
       this.nav("home");
+    },    
+
+    apartados: function() {
+      FENAZA.app =  new FENAZA.views.apartados;
+      this.nav("apartados");
     },
 
     apartado: function(id) {

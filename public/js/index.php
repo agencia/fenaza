@@ -16,10 +16,13 @@ $files = array(
         "js/models/red.js",
         "js/models/apartado.js",
         "js/models/evento.js",
+        "js/models/portada.js",
         "js/views/evento-new.js",
         "js/views/evento.js",
         "js/views/layout.js",
         "js/views/apartado.js",
+        "js/views/apartado-list.js",
+        "js/views/apartado-new.js",
         "js/views/redes.js",
         "js/views/apartado-edit.js",
         "js/views/apartado-detail.js"
