@@ -22,6 +22,7 @@ class EventosController extends BaseController {
 		$e->fecha = Input::get("fecha");
 		$e->etiqueta1 = Input::get("etiqueta1");
 		$e->etiqueta2 = Input::get("etiqueta2");
+		$e->src = Input::get("src");
 		$e->save();
 	}
 

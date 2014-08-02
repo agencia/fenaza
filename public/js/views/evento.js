@@ -7,7 +7,8 @@ FENAZA.views.evento = Backbone.View.extend({
         events: {
             "click .btn-editar": "edit",
             "click .btn-status": "toggleStatus",
-            "click .btn-eliminar": "destroy"
+            "click .btn-eliminar": "destroy",
+            "click .btn-upload": 'upload'
 
         },
         initialize: function(options) {
@@ -19,6 +20,7 @@ FENAZA.views.evento = Backbone.View.extend({
         // Re-render the titles of the todo item.
         render: function() {
             this.$el.html(this.template(this.model.toJSON()));
+            this.initFileUpload();
             return this;
         },
         edit: function(e){
@@ -39,6 +41,31 @@ FENAZA.views.evento = Backbone.View.extend({
             if(confirm('¿Está seguro de eliminar este registro?')){
                 this.model.destroy();
             }
+        },
+
+        upload:function(e){
+            e.preventDefault();
+            this.$(".fileupload").click();
+        },
+
+        initFileUpload:function(){
+            var self = this;
+            this.$(".fileupload").fileupload({
+                url: FENAZA.site + "upload.php",
+                dataType: 'json',
+                done: function (e, data) {
+                    $.each(data.result.files, function (index, file) {
+                        self.model.save({'src':'img/' + file.name});
+                    });
+                },
+                progressall: function (e, data) {
+                    var progress = parseInt(data.loaded / data.total * 100, 10);
+                    $('#progress .progress-bar').css(
+                        'width',
+                        progress + '%'
+                    );
+                }
+            });
         }
 
     });

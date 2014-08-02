@@ -31,7 +31,7 @@ window.FENAZA.views.home = Backbone.View.extend({
 
   initFileUpload:function(){
         $("#fileupload").fileupload({
-        url: "/upload.php",
+        url: FENAZA.site + "upload.php",
         dataType: 'json',
         done: function (e, data) {
             $.each(data.result.files, function (index, file) {
