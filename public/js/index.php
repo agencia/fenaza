@@ -3,6 +3,9 @@ header('Content-type: text/javascript');
 
 $files = array(
         "js/lib/jquery-2.1.1.min.js",
+        "js/lib/jquery.ui.widget.js",
+        "js/lib/jquery.iframe-transport.js",
+        "js/lib/jquery.fileupload.js",
         "js/lib/underscore-min.js",
         "js/lib/backbone-min.js",
         "js/lib/bootstrap.min.js",

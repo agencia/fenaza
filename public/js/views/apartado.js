@@ -22,7 +22,7 @@ FENAZA.views.apartado = Backbone.View.extend({
         detail: function(e){
             e.preventDefault();
             $("#myModal").modal('show');
-            var view = new FENAZA.views.eventos({model:this.model});
+            var view = new FENAZA.views.apartadoEdit({model:this.model});
             $("#myModal > div > div > div.modal-body").html(view.render().el);
             //#myModal > div > div > div.modal-body
         },

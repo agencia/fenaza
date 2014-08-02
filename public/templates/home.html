@@ -2,8 +2,10 @@
 	<div id="portada">
 	<h1>Imagen de Portada</h1>
 		<img src="<%= portada.src %>" width="100%" id="img-portada" />
-		<form>
-			<button class="btn btn-success btn-block">Subir portada</button>
-		</form>
+			<button class="btn btn-success btn-block btn-subir">Subir portada</button>
+			<input id="fileupload" type="file" name="files" />
+			<div id="progress" class="progress">
+        		<div class="progress-bar progress-bar-success"></div>
+    		</div>
 	</div>
 	</script>

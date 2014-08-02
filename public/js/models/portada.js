@@ -1,5 +1,8 @@
 //portada.js
 
 FENAZA.models.portada = Backbone.Model.extend({
-	url: "/portada"
+    idAttribute: 'idPortada',
+	url: function(){
+		return "/portada/" + this.get('idPortada');
+	}
 });

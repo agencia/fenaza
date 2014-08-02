@@ -2,7 +2,7 @@
 
 FENAZA.views.red = Backbone.View.extend({
         //... is a table row tag.
-        tagName: "li",
+        tagName: "tr",
         // Cache the template function for a single item.
         //editTemplate: _.template($('#red-item-edit-template').html()),
         events: {

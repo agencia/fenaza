@@ -67,7 +67,11 @@ class PortadaController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$portada = Portada::find($id);
+		$portada->src = Input::get("src");
+		$portada->save();
+
+		return Response::json($portada);
 	}
 
 
