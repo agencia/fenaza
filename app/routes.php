@@ -17,8 +17,10 @@ Route::get('/', function()
 });
 
 Route::Controller("user","UserController");
-Route::Controller("ws","WebserviceController");
 Route::resource("portada","PortadaController");
 Route::Controller("redes","RedesController");
 Route::resource("apartados","ApartadosController");
 Route::resource("eventos","EventosController");
+Route::get('/api/{since?}','WebserviceController@get');
+Route::get('/zip/{since?}','WebserviceController@zip');
+Route::get('/check/{since?}','WebserviceController@check');

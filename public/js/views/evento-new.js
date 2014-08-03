@@ -1,7 +1,8 @@
 FENAZA.views.eventoNew = Backbone.View.extend({
         tagName: "div",
         events: {
-            "submit #form-evento-new": "save"
+            "submit #form-evento-new": "save",
+            "click .btn-submit": "submit"
 
         },
         collection: FENAZA.data.eventos,
@@ -27,12 +28,12 @@ FENAZA.views.eventoNew = Backbone.View.extend({
                 data.fecha = fecha[2] + '-' + fecha[1] + '-' + fecha[0];
             }
             
-            this.collection.create(data);
+            this.collection.create(data,{wait: true});
             $("#myModal").modal('hide');
         },
-        submit: function(){
+        submit: function(e){
             $('.btn-submit').off('click');
-            $("#form-evento").submit();
+            $("#form-evento-new").submit();
         }
 
     });

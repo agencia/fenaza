@@ -12,7 +12,9 @@ class EventosController extends BaseController {
 		$e->etiqueta2 = Input::get("etiqueta2");
 		$e->save();
 
-		return Response::json($e);
+		$ee = Evento::find($e->idEvento);
+
+		return Response::json($ee);
 	}
 
 	public function update($id){
@@ -23,7 +25,9 @@ class EventosController extends BaseController {
 		$e->etiqueta1 = Input::get("etiqueta1");
 		$e->etiqueta2 = Input::get("etiqueta2");
 		$e->src = Input::get("src");
+		$e->status = Input::get("status");
 		$e->save();
+		return Response::json($e);
 	}
 
 	public function destroy($id){
